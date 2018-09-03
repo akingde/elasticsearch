@@ -1,0 +1,374 @@
+[2018-09-02T21:36:17,276][WARN ][o.e.c.l.LogConfigurator  ] [] Some logging configurations have %marker but don't have %node_name. We will automatically add %node_name to the pattern to ease the migration for users who customize log4j2.properties but will stop this behavior in 7.0. You should manually replace `%node_name` with `[%node_name]%marker ` in these locations:
+  /Users/chuguobin/workspace-opensource/elasticsearch/home/config/log4j2.properties
+[2018-09-02T21:36:17,283][ERROR][o.e.b.Bootstrap          ] [] Exception
+java.lang.IllegalStateException: modules directory [/Users/chuguobin/workspace-opensource/elasticsearch/home/modules] not found
+	at org.elasticsearch.bootstrap.Spawner.spawnNativeControllers(Spawner.java:66) ~[main/:?]
+	at org.elasticsearch.bootstrap.Bootstrap.setup(Bootstrap.java:166) ~[main/:?]
+	at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:327) [main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:136) [main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.execute(Elasticsearch.java:127) [main/:?]
+	at org.elasticsearch.cli.EnvironmentAwareCommand.execute(EnvironmentAwareCommand.java:86) [main/:?]
+	at org.elasticsearch.cli.Command.mainWithoutErrorHandling(Command.java:124) [main/:?]
+	at org.elasticsearch.cli.Command.main(Command.java:90) [main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:93) [main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:86) [main/:?]
+[2018-09-02T21:36:17,291][WARN ][o.e.b.ElasticsearchUncaughtExceptionHandler] [] uncaught exception in thread [main]
+org.elasticsearch.bootstrap.StartupException: java.lang.IllegalStateException: modules directory [/Users/chuguobin/workspace-opensource/elasticsearch/home/modules] not found
+	at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:140) ~[main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.execute(Elasticsearch.java:127) ~[main/:?]
+	at org.elasticsearch.cli.EnvironmentAwareCommand.execute(EnvironmentAwareCommand.java:86) ~[main/:?]
+	at org.elasticsearch.cli.Command.mainWithoutErrorHandling(Command.java:124) ~[main/:?]
+	at org.elasticsearch.cli.Command.main(Command.java:90) ~[main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:93) ~[main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:86) ~[main/:?]
+Caused by: java.lang.IllegalStateException: modules directory [/Users/chuguobin/workspace-opensource/elasticsearch/home/modules] not found
+	at org.elasticsearch.bootstrap.Spawner.spawnNativeControllers(Spawner.java:66) ~[main/:?]
+	at org.elasticsearch.bootstrap.Bootstrap.setup(Bootstrap.java:166) ~[main/:?]
+	at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:327) ~[main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:136) ~[main/:?]
+	... 6 more
+[2018-09-02T21:43:43,589][WARN ][o.e.c.l.LogConfigurator  ] [] Some logging configurations have %marker but don't have %node_name. We will automatically add %node_name to the pattern to ease the migration for users who customize log4j2.properties but will stop this behavior in 7.0. You should manually replace `%node_name` with `[%node_name]%marker ` in these locations:
+  /Users/chuguobin/workspace-opensource/elasticsearch/home/config/log4j2.properties
+[2018-09-02T21:43:44,602][INFO ][o.e.e.NodeEnvironment    ] [] using [1] data paths, mounts [[/ (/dev/disk1s1)]], net usable_space [282.1gb], net total_space [465.6gb], types [apfs]
+[2018-09-02T21:43:44,605][INFO ][o.e.e.NodeEnvironment    ] [] heap size [4gb], compressed ordinary object pointers [true]
+[2018-09-02T21:43:44,613][INFO ][o.e.n.Node               ] [] node name derived from node ID [RzffCT4nT-aTSY5OuBaMYw]; set [node.name] to override
+[2018-09-02T21:43:44,613][INFO ][o.e.n.Node               ] [] version[7.0.0-alpha1-SNAPSHOT], pid[25070], build[unknown/unknown/Unknown/Unknown], OS[Mac OS X/10.13.3/x86_64], JVM["Oracle Corporation"/Java HotSpot(TM) 64-Bit Server VM/10.0.2/10.0.2+13]
+[2018-09-02T21:43:44,614][INFO ][o.e.n.Node               ] [] JVM arguments [-Des.path.conf=/Users/chuguobin/workspace-opensource/elasticsearch/home/config, -Des.path.home=/Users/chuguobin/workspace-opensource/elasticsearch/home, -Dlog4j2.disable.jmx=true, -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=60832:/Applications/IntelliJ IDEA.app/Contents/bin, -Dfile.encoding=UTF-8]
+[2018-09-02T21:43:44,621][WARN ][o.e.n.Node               ] [] version [7.0.0-alpha1-SNAPSHOT] is a pre-release version of Elasticsearch and is not suitable for production
+[2018-09-02T21:43:45,191][ERROR][o.e.b.Bootstrap          ] [] Exception
+java.lang.IllegalArgumentException: Plugin [percolator] was built for Elasticsearch version 6.4.0 but version 7.0.0-alpha1 is running
+	at org.elasticsearch.plugins.PluginsService.verifyCompatibility(PluginsService.java:339) ~[main/:?]
+	at org.elasticsearch.plugins.PluginsService.loadBundle(PluginsService.java:524) ~[main/:?]
+	at org.elasticsearch.plugins.PluginsService.loadBundles(PluginsService.java:464) ~[main/:?]
+	at org.elasticsearch.plugins.PluginsService.<init>(PluginsService.java:156) ~[main/:?]
+	at org.elasticsearch.node.Node.<init>(Node.java:317) ~[main/:?]
+	at org.elasticsearch.node.Node.<init>(Node.java:263) ~[main/:?]
+	at org.elasticsearch.bootstrap.Bootstrap$5.<init>(Bootstrap.java:213) ~[main/:?]
+	at org.elasticsearch.bootstrap.Bootstrap.setup(Bootstrap.java:213) ~[main/:?]
+	at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:327) [main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:136) [main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.execute(Elasticsearch.java:127) [main/:?]
+	at org.elasticsearch.cli.EnvironmentAwareCommand.execute(EnvironmentAwareCommand.java:86) [main/:?]
+	at org.elasticsearch.cli.Command.mainWithoutErrorHandling(Command.java:124) [main/:?]
+	at org.elasticsearch.cli.Command.main(Command.java:90) [main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:93) [main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:86) [main/:?]
+[2018-09-02T21:43:45,202][WARN ][o.e.b.ElasticsearchUncaughtExceptionHandler] [] uncaught exception in thread [main]
+org.elasticsearch.bootstrap.StartupException: java.lang.IllegalArgumentException: Plugin [percolator] was built for Elasticsearch version 6.4.0 but version 7.0.0-alpha1 is running
+	at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:140) ~[main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.execute(Elasticsearch.java:127) ~[main/:?]
+	at org.elasticsearch.cli.EnvironmentAwareCommand.execute(EnvironmentAwareCommand.java:86) ~[main/:?]
+	at org.elasticsearch.cli.Command.mainWithoutErrorHandling(Command.java:124) ~[main/:?]
+	at org.elasticsearch.cli.Command.main(Command.java:90) ~[main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:93) ~[main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:86) ~[main/:?]
+Caused by: java.lang.IllegalArgumentException: Plugin [percolator] was built for Elasticsearch version 6.4.0 but version 7.0.0-alpha1 is running
+	at org.elasticsearch.plugins.PluginsService.verifyCompatibility(PluginsService.java:339) ~[main/:?]
+	at org.elasticsearch.plugins.PluginsService.loadBundle(PluginsService.java:524) ~[main/:?]
+	at org.elasticsearch.plugins.PluginsService.loadBundles(PluginsService.java:464) ~[main/:?]
+	at org.elasticsearch.plugins.PluginsService.<init>(PluginsService.java:156) ~[main/:?]
+	at org.elasticsearch.node.Node.<init>(Node.java:317) ~[main/:?]
+	at org.elasticsearch.node.Node.<init>(Node.java:263) ~[main/:?]
+	at org.elasticsearch.bootstrap.Bootstrap$5.<init>(Bootstrap.java:213) ~[main/:?]
+	at org.elasticsearch.bootstrap.Bootstrap.setup(Bootstrap.java:213) ~[main/:?]
+	at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:327) ~[main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:136) ~[main/:?]
+	... 6 more
+[2018-09-02T21:46:22,590][WARN ][o.e.c.l.LogConfigurator  ] [] Some logging configurations have %marker but don't have %node_name. We will automatically add %node_name to the pattern to ease the migration for users who customize log4j2.properties but will stop this behavior in 7.0. You should manually replace `%node_name` with `[%node_name]%marker ` in these locations:
+  /Users/chuguobin/workspace-opensource/elasticsearch/home/config/log4j2.properties
+[2018-09-02T21:46:23,540][INFO ][o.e.e.NodeEnvironment    ] [] using [1] data paths, mounts [[/ (/dev/disk1s1)]], net usable_space [282.1gb], net total_space [465.6gb], types [apfs]
+[2018-09-02T21:46:23,541][INFO ][o.e.e.NodeEnvironment    ] [] heap size [4gb], compressed ordinary object pointers [true]
+[2018-09-02T21:46:23,543][INFO ][o.e.n.Node               ] [] node name derived from node ID [RzffCT4nT-aTSY5OuBaMYw]; set [node.name] to override
+[2018-09-02T21:46:23,544][INFO ][o.e.n.Node               ] [] version[7.0.0-alpha1-SNAPSHOT], pid[25085], build[unknown/unknown/Unknown/Unknown], OS[Mac OS X/10.13.3/x86_64], JVM["Oracle Corporation"/Java HotSpot(TM) 64-Bit Server VM/10.0.2/10.0.2+13]
+[2018-09-02T21:46:23,544][INFO ][o.e.n.Node               ] [] JVM arguments [-Des.path.conf=/Users/chuguobin/workspace-opensource/elasticsearch/home/config, -Des.path.home=/Users/chuguobin/workspace-opensource/elasticsearch/home, -Dlog4j2.disable.jmx=true, -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=60853:/Applications/IntelliJ IDEA.app/Contents/bin, -Dfile.encoding=UTF-8]
+[2018-09-02T21:46:23,544][WARN ][o.e.n.Node               ] [] version [7.0.0-alpha1-SNAPSHOT] is a pre-release version of Elasticsearch and is not suitable for production
+[2018-09-02T21:46:24,049][ERROR][o.e.b.ElasticsearchUncaughtExceptionHandler] [] fatal error in thread [main], exiting
+java.lang.NoClassDefFoundError: org/elasticsearch/plugins/ExtendedPluginsClassLoader
+	at org.elasticsearch.plugins.PluginsService.loadBundle(PluginsService.java:538) ~[main/:?]
+	at org.elasticsearch.plugins.PluginsService.loadBundles(PluginsService.java:464) ~[main/:?]
+	at org.elasticsearch.plugins.PluginsService.<init>(PluginsService.java:156) ~[main/:?]
+	at org.elasticsearch.node.Node.<init>(Node.java:317) ~[main/:?]
+	at org.elasticsearch.node.Node.<init>(Node.java:263) ~[main/:?]
+	at org.elasticsearch.bootstrap.Bootstrap$5.<init>(Bootstrap.java:213) ~[main/:?]
+	at org.elasticsearch.bootstrap.Bootstrap.setup(Bootstrap.java:213) ~[main/:?]
+	at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:327) ~[main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:136) ~[main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.execute(Elasticsearch.java:127) ~[main/:?]
+	at org.elasticsearch.cli.EnvironmentAwareCommand.execute(EnvironmentAwareCommand.java:86) ~[main/:?]
+	at org.elasticsearch.cli.Command.mainWithoutErrorHandling(Command.java:124) ~[main/:?]
+	at org.elasticsearch.cli.Command.main(Command.java:90) ~[main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:93) ~[main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:86) ~[main/:?]
+Caused by: java.lang.ClassNotFoundException: org.elasticsearch.plugins.ExtendedPluginsClassLoader
+	at jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582) ~[?:?]
+	at jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190) ~[?:?]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:499) ~[?:?]
+	... 15 more
+[2018-09-02T21:48:46,504][WARN ][o.e.c.l.LogConfigurator  ] [] Some logging configurations have %marker but don't have %node_name. We will automatically add %node_name to the pattern to ease the migration for users who customize log4j2.properties but will stop this behavior in 7.0. You should manually replace `%node_name` with `[%node_name]%marker ` in these locations:
+  /Users/chuguobin/workspace-opensource/elasticsearch/home/config/log4j2.properties
+[2018-09-02T21:48:47,348][INFO ][o.e.e.NodeEnvironment    ] [] using [1] data paths, mounts [[/ (/dev/disk1s1)]], net usable_space [282.1gb], net total_space [465.6gb], types [apfs]
+[2018-09-02T21:48:47,348][INFO ][o.e.e.NodeEnvironment    ] [] heap size [4gb], compressed ordinary object pointers [true]
+[2018-09-02T21:48:47,351][INFO ][o.e.n.Node               ] [] node name derived from node ID [RzffCT4nT-aTSY5OuBaMYw]; set [node.name] to override
+[2018-09-02T21:48:47,351][INFO ][o.e.n.Node               ] [] version[7.0.0-alpha1-SNAPSHOT], pid[25091], build[unknown/unknown/Unknown/Unknown], OS[Mac OS X/10.13.3/x86_64], JVM["Oracle Corporation"/Java HotSpot(TM) 64-Bit Server VM/10.0.2/10.0.2+13]
+[2018-09-02T21:48:47,351][INFO ][o.e.n.Node               ] [] JVM arguments [-Des.path.conf=/Users/chuguobin/workspace-opensource/elasticsearch/home/config, -Des.path.home=/Users/chuguobin/workspace-opensource/elasticsearch/home, -Dlog4j2.disable.jmx=true, -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=60871:/Applications/IntelliJ IDEA.app/Contents/bin, -Dfile.encoding=UTF-8]
+[2018-09-02T21:48:47,351][WARN ][o.e.n.Node               ] [] version [7.0.0-alpha1-SNAPSHOT] is a pre-release version of Elasticsearch and is not suitable for production
+[2018-09-02T21:48:47,906][ERROR][o.e.b.Bootstrap          ] [] Exception
+java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "createClassLoader")
+	at java.security.AccessControlContext.checkPermission(AccessControlContext.java:472) ~[?:?]
+	at java.security.AccessController.checkPermission(AccessController.java:895) ~[?:?]
+	at java.lang.SecurityManager.checkPermission(SecurityManager.java:335) ~[?:?]
+	at java.lang.SecurityManager.checkCreateClassLoader(SecurityManager.java:397) ~[?:?]
+	at java.lang.ClassLoader.checkCreateClassLoader(ClassLoader.java:365) ~[?:?]
+	at java.lang.ClassLoader.checkCreateClassLoader(ClassLoader.java:355) ~[?:?]
+	at java.lang.ClassLoader.<init>(ClassLoader.java:434) ~[?:?]
+	at org.elasticsearch.plugins.ExtendedPluginsClassLoader.<init>(ExtendedPluginsClassLoader.java:36) ~[main/:?]
+	at org.elasticsearch.plugins.ExtendedPluginsClassLoader.lambda$create$0(ExtendedPluginsClassLoader.java:57) ~[main/:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:?]
+	at org.elasticsearch.plugins.ExtendedPluginsClassLoader.create(ExtendedPluginsClassLoader.java:56) ~[main/:?]
+	at org.elasticsearch.plugins.PluginLoaderIndirection.createLoader(PluginLoaderIndirection.java:31) ~[main/:?]
+	at org.elasticsearch.plugins.PluginsService.loadBundle(PluginsService.java:538) ~[main/:?]
+	at org.elasticsearch.plugins.PluginsService.loadBundles(PluginsService.java:464) ~[main/:?]
+	at org.elasticsearch.plugins.PluginsService.<init>(PluginsService.java:156) ~[main/:?]
+	at org.elasticsearch.node.Node.<init>(Node.java:317) ~[main/:?]
+	at org.elasticsearch.node.Node.<init>(Node.java:263) ~[main/:?]
+	at org.elasticsearch.bootstrap.Bootstrap$5.<init>(Bootstrap.java:213) ~[main/:?]
+	at org.elasticsearch.bootstrap.Bootstrap.setup(Bootstrap.java:213) ~[main/:?]
+	at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:327) [main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:136) [main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.execute(Elasticsearch.java:127) [main/:?]
+	at org.elasticsearch.cli.EnvironmentAwareCommand.execute(EnvironmentAwareCommand.java:86) [main/:?]
+	at org.elasticsearch.cli.Command.mainWithoutErrorHandling(Command.java:124) [main/:?]
+	at org.elasticsearch.cli.Command.main(Command.java:90) [main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:93) [main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:86) [main/:?]
+[2018-09-02T21:48:47,922][WARN ][o.e.b.ElasticsearchUncaughtExceptionHandler] [] uncaught exception in thread [main]
+org.elasticsearch.bootstrap.StartupException: java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "createClassLoader")
+	at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:140) ~[main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.execute(Elasticsearch.java:127) ~[main/:?]
+	at org.elasticsearch.cli.EnvironmentAwareCommand.execute(EnvironmentAwareCommand.java:86) ~[main/:?]
+	at org.elasticsearch.cli.Command.mainWithoutErrorHandling(Command.java:124) ~[main/:?]
+	at org.elasticsearch.cli.Command.main(Command.java:90) ~[main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:93) ~[main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:86) ~[main/:?]
+Caused by: java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "createClassLoader")
+	at java.security.AccessControlContext.checkPermission(AccessControlContext.java:472) ~[?:?]
+	at java.security.AccessController.checkPermission(AccessController.java:895) ~[?:?]
+	at java.lang.SecurityManager.checkPermission(SecurityManager.java:335) ~[?:?]
+	at java.lang.SecurityManager.checkCreateClassLoader(SecurityManager.java:397) ~[?:?]
+	at java.lang.ClassLoader.checkCreateClassLoader(ClassLoader.java:365) ~[?:?]
+	at java.lang.ClassLoader.checkCreateClassLoader(ClassLoader.java:355) ~[?:?]
+	at java.lang.ClassLoader.<init>(ClassLoader.java:434) ~[?:?]
+	at org.elasticsearch.plugins.ExtendedPluginsClassLoader.<init>(ExtendedPluginsClassLoader.java:36) ~[main/:?]
+	at org.elasticsearch.plugins.ExtendedPluginsClassLoader.lambda$create$0(ExtendedPluginsClassLoader.java:57) ~[main/:?]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:?]
+	at org.elasticsearch.plugins.ExtendedPluginsClassLoader.create(ExtendedPluginsClassLoader.java:56) ~[main/:?]
+	at org.elasticsearch.plugins.PluginLoaderIndirection.createLoader(PluginLoaderIndirection.java:31) ~[main/:?]
+	at org.elasticsearch.plugins.PluginsService.loadBundle(PluginsService.java:538) ~[main/:?]
+	at org.elasticsearch.plugins.PluginsService.loadBundles(PluginsService.java:464) ~[main/:?]
+	at org.elasticsearch.plugins.PluginsService.<init>(PluginsService.java:156) ~[main/:?]
+	at org.elasticsearch.node.Node.<init>(Node.java:317) ~[main/:?]
+	at org.elasticsearch.node.Node.<init>(Node.java:263) ~[main/:?]
+	at org.elasticsearch.bootstrap.Bootstrap$5.<init>(Bootstrap.java:213) ~[main/:?]
+	at org.elasticsearch.bootstrap.Bootstrap.setup(Bootstrap.java:213) ~[main/:?]
+	at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:327) ~[main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:136) ~[main/:?]
+	... 6 more
+[2018-09-02T21:51:25,460][WARN ][o.e.c.l.LogConfigurator  ] [] Some logging configurations have %marker but don't have %node_name. We will automatically add %node_name to the pattern to ease the migration for users who customize log4j2.properties but will stop this behavior in 7.0. You should manually replace `%node_name` with `[%node_name]%marker ` in these locations:
+  /Users/chuguobin/workspace-opensource/elasticsearch/home/config/log4j2.properties
+[2018-09-02T21:51:26,459][INFO ][o.e.e.NodeEnvironment    ] [] using [1] data paths, mounts [[/ (/dev/disk1s1)]], net usable_space [282.1gb], net total_space [465.6gb], types [apfs]
+[2018-09-02T21:51:26,459][INFO ][o.e.e.NodeEnvironment    ] [] heap size [4gb], compressed ordinary object pointers [true]
+[2018-09-02T21:51:26,461][INFO ][o.e.n.Node               ] [] node name derived from node ID [RzffCT4nT-aTSY5OuBaMYw]; set [node.name] to override
+[2018-09-02T21:51:26,462][INFO ][o.e.n.Node               ] [] version[7.0.0-alpha1-SNAPSHOT], pid[25113], build[unknown/unknown/Unknown/Unknown], OS[Mac OS X/10.13.3/x86_64], JVM["Oracle Corporation"/Java HotSpot(TM) 64-Bit Server VM/10.0.2/10.0.2+13]
+[2018-09-02T21:51:26,462][INFO ][o.e.n.Node               ] [] JVM arguments [-Des.path.conf=/Users/chuguobin/workspace-opensource/elasticsearch/home/config, -Des.path.home=/Users/chuguobin/workspace-opensource/elasticsearch/home, -Dlog4j2.disable.jmx=true, -Djava.security.policy=/Users/chuguobin/workspace-opensource/elasticsearch/home/config/java.policy, -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=60891:/Applications/IntelliJ IDEA.app/Contents/bin, -Dfile.encoding=UTF-8]
+[2018-09-02T21:51:26,462][WARN ][o.e.n.Node               ] [] version [7.0.0-alpha1-SNAPSHOT] is a pre-release version of Elasticsearch and is not suitable for production
+[2018-09-02T21:51:27,873][ERROR][o.e.b.Bootstrap          ] [] Exception
+java.lang.IllegalArgumentException: Plugin [repository-url] was built for Elasticsearch version 6.4.0 but version 7.0.0-alpha1 is running
+	at org.elasticsearch.plugins.PluginsService.verifyCompatibility(PluginsService.java:339) ~[main/:?]
+	at org.elasticsearch.plugins.PluginsService.loadBundle(PluginsService.java:524) ~[main/:?]
+	at org.elasticsearch.plugins.PluginsService.loadBundles(PluginsService.java:464) ~[main/:?]
+	at org.elasticsearch.plugins.PluginsService.<init>(PluginsService.java:156) ~[main/:?]
+	at org.elasticsearch.node.Node.<init>(Node.java:317) ~[main/:?]
+	at org.elasticsearch.node.Node.<init>(Node.java:263) ~[main/:?]
+	at org.elasticsearch.bootstrap.Bootstrap$5.<init>(Bootstrap.java:213) ~[main/:?]
+	at org.elasticsearch.bootstrap.Bootstrap.setup(Bootstrap.java:213) ~[main/:?]
+	at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:327) [main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:136) [main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.execute(Elasticsearch.java:127) [main/:?]
+	at org.elasticsearch.cli.EnvironmentAwareCommand.execute(EnvironmentAwareCommand.java:86) [main/:?]
+	at org.elasticsearch.cli.Command.mainWithoutErrorHandling(Command.java:124) [main/:?]
+	at org.elasticsearch.cli.Command.main(Command.java:90) [main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:93) [main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:86) [main/:?]
+[2018-09-02T21:51:27,885][WARN ][o.e.b.ElasticsearchUncaughtExceptionHandler] [] uncaught exception in thread [main]
+org.elasticsearch.bootstrap.StartupException: java.lang.IllegalArgumentException: Plugin [repository-url] was built for Elasticsearch version 6.4.0 but version 7.0.0-alpha1 is running
+	at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:140) ~[main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.execute(Elasticsearch.java:127) ~[main/:?]
+	at org.elasticsearch.cli.EnvironmentAwareCommand.execute(EnvironmentAwareCommand.java:86) ~[main/:?]
+	at org.elasticsearch.cli.Command.mainWithoutErrorHandling(Command.java:124) ~[main/:?]
+	at org.elasticsearch.cli.Command.main(Command.java:90) ~[main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:93) ~[main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:86) ~[main/:?]
+Caused by: java.lang.IllegalArgumentException: Plugin [repository-url] was built for Elasticsearch version 6.4.0 but version 7.0.0-alpha1 is running
+	at org.elasticsearch.plugins.PluginsService.verifyCompatibility(PluginsService.java:339) ~[main/:?]
+	at org.elasticsearch.plugins.PluginsService.loadBundle(PluginsService.java:524) ~[main/:?]
+	at org.elasticsearch.plugins.PluginsService.loadBundles(PluginsService.java:464) ~[main/:?]
+	at org.elasticsearch.plugins.PluginsService.<init>(PluginsService.java:156) ~[main/:?]
+	at org.elasticsearch.node.Node.<init>(Node.java:317) ~[main/:?]
+	at org.elasticsearch.node.Node.<init>(Node.java:263) ~[main/:?]
+	at org.elasticsearch.bootstrap.Bootstrap$5.<init>(Bootstrap.java:213) ~[main/:?]
+	at org.elasticsearch.bootstrap.Bootstrap.setup(Bootstrap.java:213) ~[main/:?]
+	at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:327) ~[main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:136) ~[main/:?]
+	... 6 more
+[2018-09-02T21:56:40,849][WARN ][o.e.c.l.LogConfigurator  ] [] Some logging configurations have %marker but don't have %node_name. We will automatically add %node_name to the pattern to ease the migration for users who customize log4j2.properties but will stop this behavior in 7.0. You should manually replace `%node_name` with `[%node_name]%marker ` in these locations:
+  /Users/chuguobin/workspace-opensource/elasticsearch/home/config/log4j2.properties
+[2018-09-02T21:56:41,783][INFO ][o.e.e.NodeEnvironment    ] [] using [1] data paths, mounts [[/ (/dev/disk1s1)]], net usable_space [282.1gb], net total_space [465.6gb], types [apfs]
+[2018-09-02T21:56:41,783][INFO ][o.e.e.NodeEnvironment    ] [] heap size [4gb], compressed ordinary object pointers [true]
+[2018-09-02T21:56:41,786][INFO ][o.e.n.Node               ] [] node name derived from node ID [RzffCT4nT-aTSY5OuBaMYw]; set [node.name] to override
+[2018-09-02T21:56:41,786][INFO ][o.e.n.Node               ] [] version[7.0.0-alpha1-SNAPSHOT], pid[25132], build[unknown/unknown/Unknown/Unknown], OS[Mac OS X/10.13.3/x86_64], JVM["Oracle Corporation"/Java HotSpot(TM) 64-Bit Server VM/10.0.2/10.0.2+13]
+[2018-09-02T21:56:41,786][INFO ][o.e.n.Node               ] [] JVM arguments [-Des.path.conf=/Users/chuguobin/workspace-opensource/elasticsearch/home/config, -Des.path.home=/Users/chuguobin/workspace-opensource/elasticsearch/home, -Dlog4j2.disable.jmx=true, -Djava.security.policy=/Users/chuguobin/workspace-opensource/elasticsearch/home/config/java.policy, -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=60931:/Applications/IntelliJ IDEA.app/Contents/bin, -Dfile.encoding=UTF-8]
+[2018-09-02T21:56:41,787][WARN ][o.e.n.Node               ] [] version [7.0.0-alpha1-SNAPSHOT] is a pre-release version of Elasticsearch and is not suitable for production
+[2018-09-02T21:56:43,386][ERROR][o.e.b.Bootstrap          ] [] Exception
+java.lang.IllegalArgumentException: Plugin [rank-eval] was built for Elasticsearch version 6.4.0 but version 7.0.0-alpha1 is running
+	at org.elasticsearch.plugins.PluginsService.verifyCompatibility(PluginsService.java:339) ~[main/:?]
+	at org.elasticsearch.plugins.PluginsService.loadBundle(PluginsService.java:524) ~[main/:?]
+	at org.elasticsearch.plugins.PluginsService.loadBundles(PluginsService.java:464) ~[main/:?]
+	at org.elasticsearch.plugins.PluginsService.<init>(PluginsService.java:156) ~[main/:?]
+	at org.elasticsearch.node.Node.<init>(Node.java:317) ~[main/:?]
+	at org.elasticsearch.node.Node.<init>(Node.java:263) ~[main/:?]
+	at org.elasticsearch.bootstrap.Bootstrap$5.<init>(Bootstrap.java:213) ~[main/:?]
+	at org.elasticsearch.bootstrap.Bootstrap.setup(Bootstrap.java:213) ~[main/:?]
+	at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:327) [main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:136) [main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.execute(Elasticsearch.java:127) [main/:?]
+	at org.elasticsearch.cli.EnvironmentAwareCommand.execute(EnvironmentAwareCommand.java:86) [main/:?]
+	at org.elasticsearch.cli.Command.mainWithoutErrorHandling(Command.java:124) [main/:?]
+	at org.elasticsearch.cli.Command.main(Command.java:90) [main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:93) [main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:86) [main/:?]
+[2018-09-02T21:56:43,393][WARN ][o.e.b.ElasticsearchUncaughtExceptionHandler] [] uncaught exception in thread [main]
+org.elasticsearch.bootstrap.StartupException: java.lang.IllegalArgumentException: Plugin [rank-eval] was built for Elasticsearch version 6.4.0 but version 7.0.0-alpha1 is running
+	at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:140) ~[main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.execute(Elasticsearch.java:127) ~[main/:?]
+	at org.elasticsearch.cli.EnvironmentAwareCommand.execute(EnvironmentAwareCommand.java:86) ~[main/:?]
+	at org.elasticsearch.cli.Command.mainWithoutErrorHandling(Command.java:124) ~[main/:?]
+	at org.elasticsearch.cli.Command.main(Command.java:90) ~[main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:93) ~[main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:86) ~[main/:?]
+Caused by: java.lang.IllegalArgumentException: Plugin [rank-eval] was built for Elasticsearch version 6.4.0 but version 7.0.0-alpha1 is running
+	at org.elasticsearch.plugins.PluginsService.verifyCompatibility(PluginsService.java:339) ~[main/:?]
+	at org.elasticsearch.plugins.PluginsService.loadBundle(PluginsService.java:524) ~[main/:?]
+	at org.elasticsearch.plugins.PluginsService.loadBundles(PluginsService.java:464) ~[main/:?]
+	at org.elasticsearch.plugins.PluginsService.<init>(PluginsService.java:156) ~[main/:?]
+	at org.elasticsearch.node.Node.<init>(Node.java:317) ~[main/:?]
+	at org.elasticsearch.node.Node.<init>(Node.java:263) ~[main/:?]
+	at org.elasticsearch.bootstrap.Bootstrap$5.<init>(Bootstrap.java:213) ~[main/:?]
+	at org.elasticsearch.bootstrap.Bootstrap.setup(Bootstrap.java:213) ~[main/:?]
+	at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:327) ~[main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:136) ~[main/:?]
+	... 6 more
+[2018-09-02T22:02:10,106][WARN ][o.e.c.l.LogConfigurator  ] [] Some logging configurations have %marker but don't have %node_name. We will automatically add %node_name to the pattern to ease the migration for users who customize log4j2.properties but will stop this behavior in 7.0. You should manually replace `%node_name` with `[%node_name]%marker ` in these locations:
+  /Users/chuguobin/workspace-opensource/elasticsearch/home/config/log4j2.properties
+[2018-09-02T22:02:11,081][INFO ][o.e.e.NodeEnvironment    ] [] using [1] data paths, mounts [[/ (/dev/disk1s1)]], net usable_space [282.1gb], net total_space [465.6gb], types [apfs]
+[2018-09-02T22:02:11,082][INFO ][o.e.e.NodeEnvironment    ] [] heap size [4gb], compressed ordinary object pointers [true]
+[2018-09-02T22:02:11,084][INFO ][o.e.n.Node               ] [] node name derived from node ID [RzffCT4nT-aTSY5OuBaMYw]; set [node.name] to override
+[2018-09-02T22:02:11,085][INFO ][o.e.n.Node               ] [] version[7.0.0-alpha1-SNAPSHOT], pid[25152], build[unknown/unknown/Unknown/Unknown], OS[Mac OS X/10.13.3/x86_64], JVM["Oracle Corporation"/Java HotSpot(TM) 64-Bit Server VM/10.0.2/10.0.2+13]
+[2018-09-02T22:02:11,085][INFO ][o.e.n.Node               ] [] JVM arguments [-Des.path.conf=/Users/chuguobin/workspace-opensource/elasticsearch/home/config, -Des.path.home=/Users/chuguobin/workspace-opensource/elasticsearch/home, -Dlog4j2.disable.jmx=true, -Djava.security.policy=/Users/chuguobin/workspace-opensource/elasticsearch/home/config/java.policy, -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=60975:/Applications/IntelliJ IDEA.app/Contents/bin, -Dfile.encoding=UTF-8]
+[2018-09-02T22:02:11,085][WARN ][o.e.n.Node               ] [] version [7.0.0-alpha1-SNAPSHOT] is a pre-release version of Elasticsearch and is not suitable for production
+[2018-09-02T22:02:12,930][ERROR][o.e.b.ElasticsearchUncaughtExceptionHandler] [] fatal error in thread [main], exiting
+java.lang.NoClassDefFoundError: org/elasticsearch/action/GenericAction
+	at java.lang.Class.getDeclaredConstructors0(Native Method) ~[?:?]
+	at java.lang.Class.privateGetDeclaredConstructors(Class.java:3090) ~[?:?]
+	at java.lang.Class.getConstructors(Class.java:1902) ~[?:?]
+	at org.elasticsearch.plugins.PluginsService.loadPlugin(PluginsService.java:581) ~[main/:?]
+	at org.elasticsearch.plugins.PluginsService.loadBundle(PluginsService.java:549) ~[main/:?]
+	at org.elasticsearch.plugins.PluginsService.loadBundles(PluginsService.java:464) ~[main/:?]
+	at org.elasticsearch.plugins.PluginsService.<init>(PluginsService.java:156) ~[main/:?]
+	at org.elasticsearch.node.Node.<init>(Node.java:317) ~[main/:?]
+	at org.elasticsearch.node.Node.<init>(Node.java:263) ~[main/:?]
+	at org.elasticsearch.bootstrap.Bootstrap$5.<init>(Bootstrap.java:213) ~[main/:?]
+	at org.elasticsearch.bootstrap.Bootstrap.setup(Bootstrap.java:213) ~[main/:?]
+	at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:327) ~[main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:136) ~[main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.execute(Elasticsearch.java:127) ~[main/:?]
+	at org.elasticsearch.cli.EnvironmentAwareCommand.execute(EnvironmentAwareCommand.java:86) ~[main/:?]
+	at org.elasticsearch.cli.Command.mainWithoutErrorHandling(Command.java:124) ~[main/:?]
+	at org.elasticsearch.cli.Command.main(Command.java:90) ~[main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:93) ~[main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:86) ~[main/:?]
+Caused by: java.lang.ClassNotFoundException: org.elasticsearch.action.GenericAction
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:466) ~[?:?]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:566) ~[?:?]
+	at java.net.FactoryURLClassLoader.loadClass(URLClassLoader.java:890) ~[?:?]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:499) ~[?:?]
+	... 19 more
+[2018-09-02T22:03:01,144][WARN ][o.e.c.l.LogConfigurator  ] [] Some logging configurations have %marker but don't have %node_name. We will automatically add %node_name to the pattern to ease the migration for users who customize log4j2.properties but will stop this behavior in 7.0. You should manually replace `%node_name` with `[%node_name]%marker ` in these locations:
+  /Users/chuguobin/workspace-opensource/elasticsearch/home/config/log4j2.properties
+[2018-09-02T22:03:02,122][INFO ][o.e.e.NodeEnvironment    ] [] using [1] data paths, mounts [[/ (/dev/disk1s1)]], net usable_space [281.1gb], net total_space [465.6gb], types [apfs]
+[2018-09-02T22:03:02,122][INFO ][o.e.e.NodeEnvironment    ] [] heap size [4gb], compressed ordinary object pointers [true]
+[2018-09-02T22:03:02,124][INFO ][o.e.n.Node               ] [] node name derived from node ID [RzffCT4nT-aTSY5OuBaMYw]; set [node.name] to override
+[2018-09-02T22:03:02,124][INFO ][o.e.n.Node               ] [] version[7.0.0-alpha1-SNAPSHOT], pid[25160], build[unknown/unknown/Unknown/Unknown], OS[Mac OS X/10.13.3/x86_64], JVM["Oracle Corporation"/Java HotSpot(TM) 64-Bit Server VM/10.0.2/10.0.2+13]
+[2018-09-02T22:03:02,124][INFO ][o.e.n.Node               ] [] JVM arguments [-Des.path.conf=/Users/chuguobin/workspace-opensource/elasticsearch/home/config, -Des.path.home=/Users/chuguobin/workspace-opensource/elasticsearch/home, -Dlog4j2.disable.jmx=true, -Djava.security.policy=/Users/chuguobin/workspace-opensource/elasticsearch/home/config/java.policy, -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=60984:/Applications/IntelliJ IDEA.app/Contents/bin, -Dfile.encoding=UTF-8]
+[2018-09-02T22:03:02,125][WARN ][o.e.n.Node               ] [] version [7.0.0-alpha1-SNAPSHOT] is a pre-release version of Elasticsearch and is not suitable for production
+[2018-09-02T22:03:03,767][ERROR][o.e.b.ElasticsearchUncaughtExceptionHandler] [] fatal error in thread [main], exiting
+java.lang.NoClassDefFoundError: org/elasticsearch/action/GenericAction
+	at java.lang.Class.getDeclaredConstructors0(Native Method) ~[?:?]
+	at java.lang.Class.privateGetDeclaredConstructors(Class.java:3090) ~[?:?]
+	at java.lang.Class.getConstructors(Class.java:1902) ~[?:?]
+	at org.elasticsearch.plugins.PluginsService.loadPlugin(PluginsService.java:581) ~[main/:?]
+	at org.elasticsearch.plugins.PluginsService.loadBundle(PluginsService.java:549) ~[main/:?]
+	at org.elasticsearch.plugins.PluginsService.loadBundles(PluginsService.java:464) ~[main/:?]
+	at org.elasticsearch.plugins.PluginsService.<init>(PluginsService.java:156) ~[main/:?]
+	at org.elasticsearch.node.Node.<init>(Node.java:317) ~[main/:?]
+	at org.elasticsearch.node.Node.<init>(Node.java:263) ~[main/:?]
+	at org.elasticsearch.bootstrap.Bootstrap$5.<init>(Bootstrap.java:213) ~[main/:?]
+	at org.elasticsearch.bootstrap.Bootstrap.setup(Bootstrap.java:213) ~[main/:?]
+	at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:327) ~[main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:136) ~[main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.execute(Elasticsearch.java:127) ~[main/:?]
+	at org.elasticsearch.cli.EnvironmentAwareCommand.execute(EnvironmentAwareCommand.java:86) ~[main/:?]
+	at org.elasticsearch.cli.Command.mainWithoutErrorHandling(Command.java:124) ~[main/:?]
+	at org.elasticsearch.cli.Command.main(Command.java:90) ~[main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:93) ~[main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:86) ~[main/:?]
+Caused by: java.lang.ClassNotFoundException: org.elasticsearch.action.GenericAction
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:466) ~[?:?]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:566) ~[?:?]
+	at java.net.FactoryURLClassLoader.loadClass(URLClassLoader.java:890) ~[?:?]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:499) ~[?:?]
+	... 19 more
+[2018-09-02T22:06:09,966][WARN ][o.e.c.l.LogConfigurator  ] [] Some logging configurations have %marker but don't have %node_name. We will automatically add %node_name to the pattern to ease the migration for users who customize log4j2.properties but will stop this behavior in 7.0. You should manually replace `%node_name` with `[%node_name]%marker ` in these locations:
+  /Users/chuguobin/workspace-opensource/elasticsearch/home/config/log4j2.properties
+[2018-09-02T22:06:10,841][INFO ][o.e.e.NodeEnvironment    ] [] using [1] data paths, mounts [[/ (/dev/disk1s1)]], net usable_space [281.1gb], net total_space [465.6gb], types [apfs]
+[2018-09-02T22:06:10,841][INFO ][o.e.e.NodeEnvironment    ] [] heap size [4gb], compressed ordinary object pointers [true]
+[2018-09-02T22:06:10,843][INFO ][o.e.n.Node               ] [] node name derived from node ID [RzffCT4nT-aTSY5OuBaMYw]; set [node.name] to override
+[2018-09-02T22:06:10,844][INFO ][o.e.n.Node               ] [] version[7.0.0-alpha1-SNAPSHOT], pid[25169], build[unknown/unknown/Unknown/Unknown], OS[Mac OS X/10.13.3/x86_64], JVM["Oracle Corporation"/Java HotSpot(TM) 64-Bit Server VM/10.0.2/10.0.2+13]
+[2018-09-02T22:06:10,844][INFO ][o.e.n.Node               ] [] JVM arguments [-Des.path.conf=/Users/chuguobin/workspace-opensource/elasticsearch/home/config, -Des.path.home=/Users/chuguobin/workspace-opensource/elasticsearch/home, -Dlog4j2.disable.jmx=true, -Djava.security.policy=/Users/chuguobin/workspace-opensource/elasticsearch/home/config/java.policy, -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=61007:/Applications/IntelliJ IDEA.app/Contents/bin, -Dfile.encoding=UTF-8]
+[2018-09-02T22:06:10,844][WARN ][o.e.n.Node               ] [] version [7.0.0-alpha1-SNAPSHOT] is a pre-release version of Elasticsearch and is not suitable for production
+[2018-09-02T22:06:12,459][ERROR][o.e.b.ElasticsearchUncaughtExceptionHandler] [] fatal error in thread [main], exiting
+java.lang.NoClassDefFoundError: org/elasticsearch/action/GenericAction
+	at java.lang.Class.getDeclaredConstructors0(Native Method) ~[?:?]
+	at java.lang.Class.privateGetDeclaredConstructors(Class.java:3090) ~[?:?]
+	at java.lang.Class.getConstructors(Class.java:1902) ~[?:?]
+	at org.elasticsearch.plugins.PluginsService.loadPlugin(PluginsService.java:581) ~[main/:?]
+	at org.elasticsearch.plugins.PluginsService.loadBundle(PluginsService.java:549) ~[main/:?]
+	at org.elasticsearch.plugins.PluginsService.loadBundles(PluginsService.java:464) ~[main/:?]
+	at org.elasticsearch.plugins.PluginsService.<init>(PluginsService.java:156) ~[main/:?]
+	at org.elasticsearch.node.Node.<init>(Node.java:317) ~[main/:?]
+	at org.elasticsearch.node.Node.<init>(Node.java:263) ~[main/:?]
+	at org.elasticsearch.bootstrap.Bootstrap$5.<init>(Bootstrap.java:213) ~[main/:?]
+	at org.elasticsearch.bootstrap.Bootstrap.setup(Bootstrap.java:213) ~[main/:?]
+	at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:327) ~[main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:136) ~[main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.execute(Elasticsearch.java:127) ~[main/:?]
+	at org.elasticsearch.cli.EnvironmentAwareCommand.execute(EnvironmentAwareCommand.java:86) ~[main/:?]
+	at org.elasticsearch.cli.Command.mainWithoutErrorHandling(Command.java:124) ~[main/:?]
+	at org.elasticsearch.cli.Command.main(Command.java:90) ~[main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:93) ~[main/:?]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:86) ~[main/:?]
+Caused by: java.lang.ClassNotFoundException: org.elasticsearch.action.GenericAction
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:466) ~[?:?]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:566) ~[?:?]
+	at java.net.FactoryURLClassLoader.loadClass(URLClassLoader.java:890) ~[?:?]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:499) ~[?:?]
+	... 19 more
